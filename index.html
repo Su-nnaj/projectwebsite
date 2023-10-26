@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabolo, Christian Jannus</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./S__1_-removebg-preview.png" type="image/png">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+           <a href="#" class="CJS">CJS</a>
+           <div class="burger" id="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+           </div>
+           <div class="menu" id="menu">
+              <ul class="menu-inner">
+                 <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                 <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+                 <li class="menu-item"><a href="#contact" class="menu-link">Contact</a></li>
+              </ul>
+           </div>
+           <button class="switch" id="switch">
+              <i class="switch-light bx bx-sun"></i>
+              <i class="switch-dark bx bx-moon"></i>
+           </button>
+        </nav>
+     </header>
+
+     <!--My home page code -->
+     <main class="main">
+        <section class="section banner banner-section">
+           <div class="container banner-column">
+              <img class="banner-image" src="./myimg.png" alt="Illustration">
+              <div class="banner-inner">
+                 <h1 class="heading-m">Hi! &nbsp; i'm</h1>
+                 <h1 class="heading-xl">Christian Jannus Sabolo</h1>
+                 <p class="paragraph">
+                    Bachelor of Science in Information Systems (BSIS)
+                 </p>
+                 <a href="#about" class="home-but"><button class="btn btn-darken btn-inline" >
+                  See more</i></a>
+                 </button>
+              </div>
+           </div>
+        </section>
+     </main>
+<!--This is my about code-->
+     <div class="about " id="about">
+        <div class="about-img">
+            <img src="./Aboutimg (1).png" alt="">
+            <h1>2023 <br> -Present</h1>
+            <p>Welcome to my About Page! I'm Christian Jannus Sabolo, a 20-year-old student currently pursuing a Bachelor of Science in Information Systems (BSIS) at KLD Kolehiyo ng Dasmarinas. This is my portfolio website where I'll be sharing my journey, experiences, and insights. Join me as I navigate the exciting world of information systems and technology.</p>
+        </div>
+     </div>
+<!--Hobies and  educational attainment-->
+     <div class="hobbies">
+      <div class="hobbies-text">
+         <h1>My Hobbies</h1>
+      </div>
+      <div class="sec-about">
+      <table>
+        <tr>
+           <td>Bonding<img src="./1.png" alt=""></td>
+           <td>My Dog's<img src="./2.png" alt=""></td>
+           <td>Music<img src="./Untitled design (9).png" alt=""></td>
+           </tr>
+           <tr>
+            <td>Coding<img src="./[removal.ai]_7262b21b-ba3f-49f8-99d9-d3655d454708-untitled-design-8.png" alt=""></td>
+            <td>Basketball<img src="./ball (2).png" alt=""></td>
+            <td>Gym<img src="./6.png" alt=""></td>
+         </table>
+         <div class="edu">
+            <div class="at">
+            <h1>My Educational Attainment</h1>
+           <img src="./dots.png" alt="">
+           <div class="educ">
+            <h5>KLD (Current College ) &nbsp; &nbsp; <span>2023 - 2024</span></h5>
+            <p>Bachelor of Science in Information Systems</p>
+         </div>
+         <div class="educ">
+            <h5>AISAT (Previous College) <span>2021 - 2022</span></h5>
+            <p>Bachelor of Science in Computer Science</p>
+         </div>
+         <div class="educ">
+            <h5>PCU (Senior High School)<span>2022 - 2023</span></h5>
+            <p>Information Communication and Technology</p>
+         </div>
+         <div class="educ">
+            <h5>DNNHS (High School )  &nbsp; &nbsp; &nbsp;<span>2020 - 2021</span></h5>
+         </div>
+         </div>
+         </div>
+      </div>
+     </div>
+
+      <div class="contact" id="contact">
+        <div class="input">
+            <h1>Contact Me</h1>
+        
+        <form action="submit_form.php" method="post">
+       
+            <input class="bottomline" type="text" id="last_name" name="last_name" required placeholder="Last name"><br><br>
+    
+            
+            <input class="bottomline" type="text" id="first_name" name="first_name" required placeholder="First name"><br><br>
+    
+           
+            <input class="bottomline" type="email" id="email" name="email" required placeholder="Email Address"><br><br>
+    
+         
+            <textarea id="message" name="message" rows="4" required placeholder="message" ></textarea><br><br>
+    
+           <button class="submit"><a href="">Submit</a></button>
+        </form>
+        <div class="conimg">
+         <img src="./qrcode.jpg" alt="">
+        </div>
+    </div>
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+     <!--For menu burger-->
+     <script>
+        const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const headerMenu = document.getElementById("header");
+const overlayMenu = document.querySelector(".overlay");
+
+// Open Close Navbar Menu on Click Burger
+if (burgerMenu && navbarMenu) {
+   burgerMenu.addEventListener("click", () => {
+      burgerMenu.classList.toggle("is-active");
+      navbarMenu.classList.toggle("is-active");
+   });
+}
+
+// Close Navbar Menu on Click Links
+document.querySelectorAll(".menu-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      burgerMenu.classList.remove("is-active");
+      navbarMenu.classList.remove("is-active");
+   });
+});
+
+// Fixed Navbar Menu on Window Resize
+window.addEventListener("resize", () => {
+   if (window.innerWidth >= 992) {
+      if (navbarMenu.classList.contains("is-active")) {
+         navbarMenu.classList.remove("is-active");
+         overlayMenu.classList.remove("is-active");
+      }
+   }
+});
+
+// Dark and Light Mode on Switch Click
+document.addEventListener("DOMContentLoaded", () => {
+   const darkSwitch = document.getElementById("switch");
+
+   darkSwitch.addEventListener("click", () => {
+      document.documentElement.classList.toggle("darkmode");
+      document.body.classList.toggle("darkmode");
+   });
+});
+
+     </script>
+    
+</body>
+</html>
